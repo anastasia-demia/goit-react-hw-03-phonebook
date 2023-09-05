@@ -1,0 +1,17 @@
+.label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  width: 600px;
+};
+
+ .input{
+  color: #402313;
+ }
+
+ .input:where(input) {
+  margin-right: 8px;
+  font-size: 20px;
+  width: 100%;
+}

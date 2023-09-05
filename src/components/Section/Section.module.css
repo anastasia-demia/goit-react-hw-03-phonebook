@@ -1,0 +1,15 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin: 0 auto;
+  background-color: #f2be4e91;
+  padding: 10px;
+  border: 2px dashed rgba(139, 69, 19, 0.768);
+}
+.title {
+  align-self: center;
+  margin-bottom: 10px;
+  font-size: 35px;
+  color: #402313;
+}
