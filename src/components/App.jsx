@@ -14,6 +14,19 @@ export class App extends Component {
     filter: '',
   };
 
+  initiateState() {
+    const savedContacts = JSON.parse(localStorage.getItem('contacts'));
+    if (savedContacts) {
+      this.setState({ contacts: savedContacts });
+    }
+  };
+
+  updateState(_, prevState) {
+    if (this.state.contacts !== prevState.contacts) {
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+    }
+  };
+
   addContact = ({ name, number }) => {
     const contact = {
       id: nanoid(),
@@ -39,10 +52,6 @@ export class App extends Component {
     this.setState({
       contacts: this.state.contacts.filter((contact) => contact.id !== ID),
     });
-  };
-
-  clickOnBtn = () => {
-    console.log("click bbb");
   };
 
   onXBtnClick = () => {
